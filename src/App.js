@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
 
 function App() {
+
+  // let [a, b] = useState('남자 코트 추천');
+  // a = 남자 코트 추천
+  // b = 남자 코트 추천을 변경해주는 함수
+  let [글제목, 글제목변경] = useState('남자 코트 추천');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='black-nav'>
+        <div>안녕하세요</div>
+      </div>
+      <div className='list'>
+        <h3>{글제목}</h3>
+        <p>2월 17일 발행</p>
+        <hr />
+      </div>
     </div>
   );
 }
